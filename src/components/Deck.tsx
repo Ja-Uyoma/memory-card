@@ -18,6 +18,7 @@ export function Deck() {
 
       return await response.json();
     },
+    refetchOnWindowFocus: false,
   });
 
   if (isPending) {
