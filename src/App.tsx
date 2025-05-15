@@ -1,6 +1,11 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Deck } from "./components/Deck";
+
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <header>
         <div>
           <h1>Memory Card</h1>
@@ -14,8 +19,10 @@ function App() {
           <p>Best Score</p>
         </div>
       </header>
-      <main></main>
-    </>
+      <main>
+        <Deck />
+      </main>
+    </QueryClientProvider>
   );
 }
 
