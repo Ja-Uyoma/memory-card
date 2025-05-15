@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { ScoreContext } from "../ScoreContext";
+
 export function Header() {
+  const { score, bestScore } = useContext(ScoreContext);
+
   return (
     <header className="flex justify-between">
       <div>
@@ -9,8 +14,8 @@ export function Header() {
         </p>
       </div>
       <div className="text-lg">
-        <p>Score</p>
-        <p>Best Score</p>
+        <p>Score: {score}</p>
+        <p>Best Score: {bestScore}</p>
       </div>
     </header>
   );
