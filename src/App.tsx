@@ -26,7 +26,7 @@ function App() {
     <>
       <Header />
       <QueryClientProvider client={queryClient}>
-        <main>
+        <main className="grid grid-cols-5 gap-2">
           <Deck />
         </main>
       </QueryClientProvider>
