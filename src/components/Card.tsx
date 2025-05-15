@@ -13,7 +13,7 @@ export function Card(props: { card: ICard; key: string }) {
   const value = props.card.value + " of " + props.card.suit;
 
   return (
-    <figure className="px-2 pt-2 pb-4 border-1 rounded-lg">
+    <figure className="px-2 pt-2 pb-4 border-1 rounded-lg cursor-pointer">
       <img src={props.card.image} alt={value} />
       <figcaption className="text-center pt-1">{value}</figcaption>
     </figure>
