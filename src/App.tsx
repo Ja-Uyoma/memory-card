@@ -23,12 +23,14 @@ function Header() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
       <Header />
-      <main>
-        <Deck />
-      </main>
-    </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <main>
+          <Deck />
+        </main>
+      </QueryClientProvider>
+    </>
   );
 }
 
