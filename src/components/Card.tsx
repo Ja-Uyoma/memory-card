@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { ScoreContext } from "../ScoreContext";
+
 export interface ICard {
   code: string;
   image: string;
@@ -11,11 +14,18 @@ export interface ICard {
 
 export function Card(props: { card: ICard; key: string }) {
   const value = props.card.value + " of " + props.card.suit;
+  const { updateScore } = useContext(ScoreContext);
 
   return (
-    <figure>
-      <img src={props.card.image} alt={value} />
-      <figcaption>{value}</figcaption>
+    <figure className="px-2 pt-2 pb-4 border-1 rounded-lg cursor-pointer">
+      <img
+        src={props.card.image}
+        alt={value}
+        onClick={() => {
+          updateScore();
+        }}
+      />
+      <figcaption className="text-center pt-1">{value}</figcaption>
     </figure>
   );
 }
