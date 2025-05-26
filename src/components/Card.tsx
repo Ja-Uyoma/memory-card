@@ -17,7 +17,7 @@ export function Card(props: { card: ICard; key: string }) {
   const { updateScore } = useContext(ScoreContext);
 
   return (
-    <figure className="px-2 pt-2 pb-4 border-1 rounded-lg cursor-pointer">
+    <figure className="px-2 pt-2 pb-4 cursor-pointer">
       <img
         src={props.card.image}
         alt={value}
